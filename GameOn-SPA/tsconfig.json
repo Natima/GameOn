@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -17,6 +18,10 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+
+    "paths": {
+      "@angular/*": ["node_modules/@angular/*"]
+    }
   }
 }
