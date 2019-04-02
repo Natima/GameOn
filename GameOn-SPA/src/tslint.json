@@ -5,7 +5,8 @@
       true,
       "attribute",
       "app",
-      "camelCase"
+      "camelCase",
+      "object-literal-shorthand"
     ],
     "component-selector": [
       true,
