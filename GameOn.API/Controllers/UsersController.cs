@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using AutoMapper;
 using GameOn.API.Data;
 using GameOn.API.Dtos;
+using GameOn.API.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GameOn.API.Controllers
 {
+    [ServiceFilter(typeof(LogUserActivity))]
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
