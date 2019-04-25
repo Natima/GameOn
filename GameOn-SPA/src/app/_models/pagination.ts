@@ -7,5 +7,5 @@ export interface Pagination {
 
 export class PaginatedResult<T> {
     result: T;
-    paginatation: Pagination;
+    pagination: Pagination;
 }

@@ -31,6 +31,7 @@ import { MemberEditComponent } from './members/member-edit/member-edit.component
 import { MemberEditResolver } from './_resolvers/member-edit.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 
 
 
@@ -60,6 +61,7 @@ export function tokenGetter() {
       ReactiveFormsModule,
       BsDatepickerModule.forRoot(),
       BsDropdownModule.forRoot(),
+      PaginationModule.forRoot(),
       TabsModule.forRoot(),
       NgxGalleryModule,
       FileUploadModule,
@@ -70,7 +72,8 @@ export function tokenGetter() {
             whitelistedDomains: ['localhost:5000'],
             blacklistedRoutes: ['localhost:5000/api/auth']
          }
-      })
+      }),
+            PaginationModule.forRoot()
    ],
    providers: [
       AuthService,

@@ -16,12 +16,11 @@ namespace GameOn.API.Helpers
         public static void AddPaginatior(this HttpResponse response, int currentPage,
         int itemsPerPage, int totalItems, int totalPages) 
         {
-            var paginatonHeader = new PaginationHeader(currentPage, itemsPerPage, totalItems, totalPages);
+            var paginationHeader = new PaginationHeader(currentPage, itemsPerPage, totalItems, totalPages);
             var camelCaseFormatter = new JsonSerializerSettings();
             camelCaseFormatter.ContractResolver = new CamelCasePropertyNamesContractResolver();
-            response.Headers.Add("Paginatior", 
-                JsonConvert.SerializeObject(paginatonHeader, camelCaseFormatter));
-                        response.Headers.Add("Access-Control-Expose-Headers", "Pagination");
+            response.Headers.Add("Pagination", JsonConvert.SerializeObject(paginationHeader, camelCaseFormatter));
+            response.Headers.Add("Access-Control-Expose-Headers", "Pagination");
         }
         // calculates age
         public static int CalculateAge(this DateTime theDateTime)
