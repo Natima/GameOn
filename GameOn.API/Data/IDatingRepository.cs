@@ -14,5 +14,6 @@ namespace GameOn.API.Data
          Task<User> GetUser(int id);
          Task<Photo> GetPhoto(int id);
          Task<Photo> GetMainPhotoForUser(int id);
+         Task<Like> GetLike(int userId, int recipientId);
     }
 }
