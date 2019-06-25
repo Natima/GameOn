@@ -11,9 +11,9 @@ Enjoy! :)
 * Edit profile
 * View members
 * Filters
+* Like-function
 
 # To do:
-* Like-function
 * Message system
 * Profile description improvements
 * Filter for game genre and games
