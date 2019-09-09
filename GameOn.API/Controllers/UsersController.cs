@@ -44,7 +44,7 @@ namespace GameOn.API.Controllers
 
             var usersToReturn = _mapper.Map<IEnumerable<UserForListDto>>(users);
 
-            Response.AddPaginatior(users.CurrentPage, users.PageSize,
+            Response.AddPagination(users.CurrentPage, users.PageSize,
             users.TotalCount, users.TotalPages);
 
             return Ok(usersToReturn);

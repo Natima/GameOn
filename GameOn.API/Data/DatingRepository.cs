@@ -118,7 +118,7 @@ namespace GameOn.API.Data
             return await _context.Messages.FirstOrDefaultAsync(m => m.Id == id);
         }
 
-        public async Task<PagedList<Message>> GetMessageForUser(MessageParams messageParams)
+        public async Task<PagedList<Message>> GetMessagesForUser(MessageParams messageParams)
         {
             var messages  = _context.Messages
                 .Include(u => u.Sender).ThenInclude(p => p.Photos)
@@ -153,6 +153,11 @@ namespace GameOn.API.Data
                 .ToListAsync();
 
             return messages;
+        }
+
+        public Task GetMessagseForUser(MessageParams messageParams)
+        {
+            throw new NotImplementedException();
         }
     }
 }

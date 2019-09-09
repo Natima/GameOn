@@ -34,6 +34,7 @@ import { PhotoEditorComponent } from './members/photo-editor/photo-editor.compon
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { ListsResolver } from './_resolvers/lists.resolver';
+import { MessagesResolver } from './_resolvers/messages.resolver';
 
 
 
@@ -89,7 +90,8 @@ export function tokenGetter() {
       MemberListResolver,
       MemberEditResolver,
       PreventUnsavedChanges,
-      ListsResolver
+      ListsResolver,
+      MessagesResolver
    ],
    bootstrap: [
       AppComponent
