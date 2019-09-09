@@ -40,6 +40,6 @@ export class MessagesComponent implements OnInit {
     this.pagination.currentPage = event.page;
     this.loadMessages();
   }
-  // test
+  // test 2
 
 }
